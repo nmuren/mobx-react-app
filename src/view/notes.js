@@ -9,10 +9,10 @@ const Notes = () => {
         (<>
             <h2>Note count: {store.notesCount}</h2>
             <ul>
-                {store.notes.map((note, index) => (
-                    <li key={index} onClick={() => {
-                        store.removeNote(note);
-                    }}>{note}</li>))}
+                {store.notes.map((note) => (
+                    <li key={note.id} onClick={() => {
+                        store.removeNote(note.id);
+                    }}>{note.text}</li>))}
             </ul>
         </>)
     )

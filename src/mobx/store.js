@@ -5,13 +5,16 @@ export const StoreContext = createContext();
 
 export const StoreProvider = (({children}) => {
     const store = useLocalStore(() => ({
-        notes: ["Example..."],
+        notes: [{
+            id: 0,
+            text: "Example..."
+        }],
         addNote: note => {
             store.notes.push(note)
         },
         removeNote: key => {
             store.notes = store.notes.filter(note =>
-                note !== key
+                note.id !== key
             )
         },
         get notesCount() {

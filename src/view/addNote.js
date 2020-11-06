@@ -9,7 +9,10 @@ const AddNote = () => {
 
     return (
         <Form onSubmit={e => {
-            store.addNote(note);
+            store.addNote({
+                id: 1 + (Math.random() * (Number.MAX_SAFE_INTEGER - 1)),
+                text: note
+            });
             setNote("");
             e.preventDefault();
         }}>
