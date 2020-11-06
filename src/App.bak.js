@@ -30,6 +30,28 @@ import {action, makeObservable, observable} from "mobx";
 	// the execution of a tracked function.
 	// MobX tracks property access, not values.
 
+// ================================================================================
+// mobx-react package =============================================================
+
+// observer(component) : component
+// @observer
+	// Turn React component into reactive.
+	// Wraps render function in autorun.
+	// Available in mobx-react package.
+
+// Provider
+	// React context provider to pass stores to child components.
+	// stores
+
+// inject(storeNames) : wrap(component) : component
+// @inject(storeNames)
+// @inject(mapStoresToProps(stores) : propsToInject)
+	// Connect provider stores to the React component.
+	// Wraps component in HOC.
+	// Injected stores|props fill be available as plain component's props.
+
+
+
 //Ref.: https://gist.github.com/oupirum/98cbc8666dfd9a1e586f005d81503b6b
 
 class TodoItem {
