@@ -1,10 +1,10 @@
 import React, {createContext} from "react";
-import {useLocalStore} from "mobx-react-lite";
+import {useLocalObservable} from "mobx-react-lite";
 
 export const StoreContext = createContext();
 
 export const StoreProvider = (({children}) => {
-    const store = useLocalStore(() => ({
+    const store = useLocalObservable(() => ({
         notes: [{
             id: 0,
             text: "Example..."

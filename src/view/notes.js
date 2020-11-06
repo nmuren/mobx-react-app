@@ -1,20 +1,17 @@
 import React, {useContext} from "react";
-import {useObserver} from "mobx-react-lite";
 import {StoreContext} from "../mobx/store";
+import {observer} from "mobx-react-lite";
 
-const Notes = () => {
+const Notes = observer(() => {
     const store = useContext(StoreContext);
 
-    return useObserver(() =>
-        (<>
-            <h2>Note count: {store.notesCount}</h2>
-            <ul>
-                {store.notes.map((note) => (
-                    <li key={note.id} onClick={() => {
-                        store.removeNote(note.id);
-                    }}>{note.text}</li>))}
-            </ul>
-        </>)
+    return (
+        <ul>
+            {store.notes.map((note) => (
+                <li key={note.id} onClick={() => {
+                    store.removeNote(note.id);
+                }}>{note.text}</li>))}
+        </ul>
     )
-}
+});
 export default Notes

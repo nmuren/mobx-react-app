@@ -17,18 +17,18 @@ import {action, makeObservable, observable} from "mobx";
 //  [ Reactions ] → --- → --•
 
 // Core concepts:
-// Observable state
-// Computed values
-// Value that will be derived automatically when relevant data
-// is modified.
-// Reactions
-// Like a Computed but produces side effect instead of new value.
-// Actions
-// Changing the state.
+	// Observable state
+	// Computed values
+		// Value that will be derived automatically when relevant data
+		// is modified.
+	// Reactions
+		// Like a Computed but produces side effect instead of new value.
+	// Actions
+		// Changing the state.
 
-// MobX reacts to any existing observable property that is read during
-// the execution of a tracked function.
-// MobX tracks property access, not values.
+	// MobX reacts to any existing observable property that is read during
+	// the execution of a tracked function.
+	// MobX tracks property access, not values.
 
 //Ref.: https://gist.github.com/oupirum/98cbc8666dfd9a1e586f005d81503b6b
 
