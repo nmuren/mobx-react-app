@@ -54,6 +54,9 @@ import {action, makeObservable, observable} from "mobx";
 
 //Ref.: https://gist.github.com/oupirum/98cbc8666dfd9a1e586f005d81503b6b
 
+//See also:
+//https://doc.ebichu.cc/mobx/best/react.html
+
 class TodoItem {
     //The example data fields with changing content
     title = "";

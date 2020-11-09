@@ -4,6 +4,9 @@ import {useLocalObservable} from "mobx-react-lite";
 export const StoreContext = createContext();
 
 export const StoreProvider = (({children}) => {
+    // useLocalObservable is a short-hand for:
+    // const [state] = useState(() => observable(initializer(), annotations, { autoBind: true }))
+
     const store = useLocalObservable(() => ({
         notes: [{
             id: 0,
