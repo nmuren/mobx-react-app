@@ -14,4 +14,5 @@ const Notes = observer(() => {
         </ul>
     )
 });
-export default Notes
+
+export default Notes;

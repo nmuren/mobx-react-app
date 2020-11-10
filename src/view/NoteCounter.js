@@ -14,4 +14,5 @@ const NoteCounter = observer(() => {
         }
     </>
 });
-export default NoteCounter
+
+export default NoteCounter;
