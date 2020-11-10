@@ -16,9 +16,12 @@ const AddNote = () => {
             setNote("");
             e.preventDefault();
         }}>
-            <Form.Control type="text" placeholder="Enter the next one here..." value={note} onChange={e => {
-                setNote(e.target.value);
-            }}/>
+            <Form.Control type="text"
+                          placeholder="Enter the next one here..."
+                          value={note}
+                          onChange={e => {
+                              setNote(e.target.value);
+                          }}/>
             <Button type="submit" variant="primary">Add</Button>
         </Form>
     )
