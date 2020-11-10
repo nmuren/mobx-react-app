@@ -1,7 +1,7 @@
 import React, {createContext} from "react";
 import {useLocalObservable} from "mobx-react-lite";
 
-export const StoreContext = createContext();
+export const StoreContext = createContext(null);
 
 export const StoreProvider = (({children}) => {
     // useLocalObservable is a short-hand for:
