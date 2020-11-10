@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import {StoreProvider} from "./mobx/store";
 import ViewNotes from "./view/Notes";
-import ViewAddNote from "./view/addNote";
+import ViewAddNote from "./view/AddNote";
 import ViewNoteCounter from "./view/NoteCounter";
 
 
