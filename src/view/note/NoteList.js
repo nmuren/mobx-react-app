@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
-import {StoreContext} from "../mobx/store";
 import {observer} from "mobx-react-lite";
+import {Context} from "../../mobx/indexStore";
 
-const Notes = observer(() => {
-    const store = useContext(StoreContext);
+const NoteList = observer(() => {
+    const store = useContext(Context);
 
     return (
         <ul>
@@ -15,4 +15,4 @@ const Notes = observer(() => {
     )
 });
 
-export default Notes;
+export default NoteList;

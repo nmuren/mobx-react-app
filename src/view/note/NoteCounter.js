@@ -1,14 +1,14 @@
 import React, {useContext} from "react";
 import {observer} from "mobx-react-lite";
-import {StoreContext} from "../mobx/store";
+import {Context} from "../../mobx/indexStore";
 
 const NoteCounter = observer(() => {
-    const store = useContext(StoreContext);
+    const store = useContext(Context);
 
     return <>
-        <h2>Note count: {store.notesCount}</h2>
+        <h2>Note count: {store.noteCount}</h2>
         {
-            store.notesCount > 0 ?
+            store.noteCount > 0 ?
                 <cite className="blockquote">Click on elements to delete them.</cite> :
                 undefined
         }

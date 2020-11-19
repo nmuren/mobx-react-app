@@ -1,10 +1,11 @@
 import React, {useContext, useState} from "react";
 import Button from "react-bootstrap/cjs/Button";
 import Form from "react-bootstrap/cjs/Form";
-import {StoreContext} from "../mobx/store";
+import {Context} from "../../mobx/indexStore";
 
 const AddNote = () => {
-    const store = useContext(StoreContext);
+
+    const store = useContext(Context);
     const [note, setNote] = useState("");
 
     return (
