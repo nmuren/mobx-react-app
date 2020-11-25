@@ -2,15 +2,15 @@ import {HookStoreContext, HookStoreProvider} from "./hookStore";
 import {ClassStoreContext, ClassStoreProvider} from "./classStore";
 
 //# region logging mobx
-import {enableLogging} from 'mobx-logger';
-
-const config = {
-    action: true,
-    reaction: true,
-    transaction: false,
-    compute: true
-};
-enableLogging(config);
+// import {enableLogging} from 'mobx-logger';
+//
+// const config = {
+//     action: true,
+//     reaction: true,
+//     transaction: false,
+//     compute: true
+// };
+// enableLogging(config);
 //# endregion logging mobx
 
 const CLASS_TYPE = true;

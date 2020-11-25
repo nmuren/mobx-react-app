@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
-    "incr-regex-package": "^1.0.4",
+    "incr-regex-package": "1.0.1",
     "mobx": "^6.0.4",
     "mobx-logger": "^0.7.1",
     "mobx-react": "^7.0.5",
@@ -15,7 +15,6 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
-    "react-imask": "^6.0.5",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },

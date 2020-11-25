@@ -5,7 +5,8 @@ import {Context} from "../../mobx/indexStore";
 const CounterStatus = observer(() => {
 
     const store = useContext(Context);
-    return <div>{console.debug("Computed rendered")}
+    return <div>
+        {/*{console.debug("Computed rendered")}*/}
         Computed: {store.isCounterPositive ? <span>positive</span> : <span>negative</span>}
     </div>
 });

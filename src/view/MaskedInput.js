@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Form from "react-bootstrap/cjs/Form";
 import Button from "react-bootstrap/Button";
+import RxInputMask from "../component/RxInputMask";
 
 // ((([0-9]|[1-8][0-9])((\.[0-9]{1,5})|))|90\.00000)
 // ((([0-9]|[1-8][0-9])\.[0-9]{1,5})|90\.00000)
@@ -8,7 +9,6 @@ import Button from "react-bootstrap/Button";
 // ((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)
 
 // ((([0-9]|[1-8][0-9])((\.[0-9]{1,5})|))|90\.00000) ((([0-9]|[1-9][0-9]|1[0-7][0-9])((\.[0-9]{1,5})|))|180\.00000)
-
 // ((([0-9]|[1-8][0-9])\.[0-9]{1,5})|90\.00000) ((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)
 
 // 90.00000 2146.5757749
@@ -21,37 +21,36 @@ import Button from "react-bootstrap/Button";
 // 99.0 999.99999
 // 99. .99999
 
-const Maskoo = () => {
+const MaskedInput = () => {
 
-    const [coor, setCoor] = useState("");
+    const [latLonCrd, setLatLonCrd] = useState("");
     const latRegex = /((([0-9]|[1-8][0-9])\.[0-9]{1,5})|90\.00000)/;
     const lonRegex = /((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)/;
-    const mask = /((([0-9]|[1-8][0-9])\.[0-9]{1,5})|90\.00000) ((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)/;
-
-    const color = /Red|Gr(een|ay)|Blue|Yellow|O(range|live)/;
+    const latLonRegex = /((([0-9]|[1-8][0-9])\.[0-9]{1,5})|90\.00000) ((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)/;
 
 
     return (
         <Form onSubmit={e => {
-            console.debug("coor ->", coor);
-            setCoor("");
+            console.debug("latLonCrd ->", latLonCrd);
+            setLatLonCrd("");
             e.preventDefault();
         }}>
             <label>
                 Coordinates:{' '}
 
             </label>
-            <Form.Control type="text"
-                          placeholder="Enter the coor here..."
-                          value={coor}
-                          onChange={(e) => {
-                              console.log(e.target.value);
-                              setCoor(e.target.value)
-                          }}
-            />
+            <RxInputMask
+                className="form-control"
+                name="latLonCrd"
+                mask={latLonRegex}
+                value={latLonCrd}
+                placeholder="90.00000 180.00000"
+                onChange={(e) => {
+                    setLatLonCrd(e.target.value);
+                }}/>
             <Button type="submit" variant="success">Log it</Button>
         </Form>
     )
 }
 
-export default Maskoo;
+export default MaskedInput;

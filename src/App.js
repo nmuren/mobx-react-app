@@ -10,13 +10,13 @@ import CounterStatus from "./view/counter/CounterStatus";
 import CounterNonComputeStatus from "./view/counter/CounterNonComputeStatus";
 import CounterOperations from "./view/counter/CounterOperations";
 import StoreFooter from "./view/StoreFooter";
-import Maskoo from "./view/Maskoo";
+import MaskedInput from "./view/MaskedInput";
 
 function App() {
     return (
         <div className="App App-header">
             <Provider>
-                <Maskoo/>
+                <MaskedInput/>
                 <br/><br/>
                 <NoteCounter/>
                 <NoteList/>
