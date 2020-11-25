@@ -28,6 +28,14 @@ const MaskedInput = () => {
     const lonRegex = /((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)/;
     const latLonRegex = /((([0-9]|[1-8][0-9])\.[0-9]{1,5})|90\.00000) ((([0-9]|[1-9][0-9]|1[0-7][0-9])\.[0-9]{1,5})|180\.00000)/;
 
+    const [dmsCrd, setDMSCrd] = useState("");
+    const dmsRegex = /./;
+
+    const [utmCrd, setUTMCrd] = useState("");
+    const utmRegex = /./;
+
+    const [mgrsCrd, setMGRSCrd] = useState("");
+    const mgrsRegex = /./;
 
     return (
         <Form onSubmit={e => {
